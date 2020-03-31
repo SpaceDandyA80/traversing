@@ -1,4 +1,4 @@
-{box-sizing: border-box;}
+
  
  body {background-color: #fcebb6;
 	font-family: verdana, arial, sans-serif;
@@ -6,7 +6,7 @@
 
   main {
   background-color:#fef6c2;
-  margin-left:200px; 
+  margin-left:200px;
 	padding-bottom:1em; 
 	display:block;}
  main h2, h3, h4, p, ul, dl
