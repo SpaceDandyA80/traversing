@@ -4,35 +4,45 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolioism</title>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
 <body>
-	<div id="container-fluid">
+	<div class="jumbotron" id="container-fluid">
 <header>
 
 <h1>Guillermo Garcia</h1> 
 
 </header>
-<nav>
-		<a href="index.html">About</a>
-		<a href="portfolio.html">Portfolio</a>
-		<a href="contact.html">Contact</a>
-		</nav>
+<nav class="navbar navbar-light justify-content-center">
+    <a class="nav-link active" href="index.html">About</a>
+    <a class="nav-link"href="portfolio.html">Portfolio</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+</nav>
 
 	<main>
-<div id="road"></div>
-	<h3><b>contact</b></h3>
-	
-	<p>We're a little out of the way, but take a drive down Route 42 to JavaJam today!
-	Indulge in our locally roasted free-trade coffee and home-made pastries. You'll feel right at home at JavaJam! </p>
-	
+        <form>
+			<div class="form-group">
+			  <label for="exampleFormControlInput1">Your Name</label>
+			  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Type Your Name">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Email Address</label>
+				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Type In Your Email">
+			  </div>
+			<div class="form-group">
+			  <label for="exampleFormControlTextarea1">Message</label>
+			  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		  </form>
 	</main>
 	<footer><small>
 	<i>Copyright&copy;</i>
 	</small> 
 	</footer>
 </div>
-
 </body>
 </html>
