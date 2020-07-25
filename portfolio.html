@@ -1,103 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Portfolioism</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
 
-</head>
-<body>
-	<section class="jumbotron" id="container">
-
-        <header>
-        <section class="row">   
-            <section class="col">
-               
-                <nav class="navbar navbar-collapse navbar-dark bg-success font-weight-bolder">
-                    <h1 class=" p-3 mb-2 bg-info text-dark text-center text-uppercase">Guillermo Garcia</h1>
-        <section class = "navbar nav-pills justify-content-end ">
-                    <a class="nav-link text-warning" href="index.html">About</a>
-                    <a class="nav-link active text-secondary"href="portfolio.html">Portfolio</a>
-                    <a class="nav-link text-dark" href="contact.html">Contact</a>
-        </section>
-                  </nav>
-                </section>
-            </section>
-        </header>
-<br>
-	<main>
-<section class="card bg-dark">
-
-    <section class="card-body">
-
-        <h1 class="text-success"> Portfolio</h1>
-        <hr>
-
+  <body>
+    <section class="jumbotron" id="container">
+      <header>
         <section class="row">
-
-            <section class="col-md-6">
-      
-                <figure class="figure">
-                    <img class="img" src="https://via.placeholder.com/150">
-                    <figcaption class="figure-caption text-primary">A caption for the above image.</figcaption>
-                  </figure>
+          <section class="col">
+            <section class="navbar nav-pills justify-content-end">
+              <nav
+                class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
+              >
+                <a class="navbar-brand" href="#">My Projects</a>
+                  <form class="form-inline mt-2 mt-md-0">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          Navigate
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="about.html">About</a>
+                            <a class="active dropdown-item" href="portfolio.html">Portfolio</a>
+                            <a class="dropdown-item" href="contact.html">Contact</a>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+              </nav>
             </section>
-
-    <section class="col-md-6">
-
-        <figure class="figure">
-            <img class="img" src="https://via.placeholder.com/150">
-            <figcaption class="figure-caption text-primary">A caption for the above image.</figcaption>
-          </figure>
-    </section>
-
+          </section>
         </section>
-<br>
-     <section class="row">
+      </header>
 
-        <section class="col-md-6">
+      <br />
+      <main>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a class="nav-link" href="./jobsearch/jobcitysearch.html"
+                ><img
+                  border="0"
+                  alt="street lights"
+                  src="./assets/images/streetlights.jpg"
+                />
+              </a>
 
-            <figure class="figure">
-                <img class="img" src="https://via.placeholder.com/150">
-                <figcaption class="figure-caption text-primary">A caption for the above image.</figcaption>
-              </figure>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Project 1 Job City Search</h5>
+                <p>
+                  A group project with 2 other developers to make an App that
+                  takes your inputted location and job position and gives you a
+                  listing offers as well as the weather of the location.
+                  <a
+                    class="nav-link"
+                    href="https://github.com/SpaceDandyA80/project1.git"
+                    >Github repository for my Project</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a class="nav-link" href="./passgen/passwordcreate.html"
+                ><img
+                  border="0"
+                  alt="password generator"
+                  src="./assets/images/passwordgen.png"
+                />
+              </a>
+              <div class="carousel-caption d-none d-md-block text-dark">
+                <h5>Password Generation</h5>
+                <p>
+                  A password generator, it prompts you for certain parameters
+                  and based on what you have selected it will generate you a
+                  password.
+                  <a
+                    class="nav-link"
+                    href="https://github.com/SpaceDandyA80/passwordgen.git"
+                    >Github repository for my password generator</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a class="nav-link" href="./weatherDash/weather.html"
+                ><img
+                  border="0"
+                  alt="password generator"
+                  src="./assets/images/weatherDashboard.png"
+                />
+              </a>
+              <div class="carousel-caption d-none d-md-block text-dark">
+                <h5>Weather Dashboard</h5>
+                <p>
+                  A weather app that will take the users input of a city and
+                  will give them the current weather
+                  <a
+                    class="nav-link"
+                    href="https://github.com/SpaceDandyA80/weatherDashboard.git"
+                    >Github repository for my Weather Dashboard</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a
+                class="nav-link"
+                href="https://secure-brushlands-04759.herokuapp.com/"
+                ><img
+                  border="0"
+                  alt="bill reminder"
+                  src="./assets/images/reminder.png"
+                />
+              </a>
+              <div class="carousel-caption d-none d-md-block text-dark">
+                <h5>Bill and Subscriptions App</h5>
+                <p>
+                  An app that will allow you to add your bills and subcriptions
+                  and remind you when it is and how much is due.
+                  <a
+                    class="nav-link"
+                    href="https://github.com/blakshep1981/Bill-and-Subscription-Reminder-Application"
+                    >Github repository for the Bill and Subscriptions
+                    reminder</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <br />
+
+        <footer class="row footer">
+          <section class="col">
+            <p class="text-center">
+              <small><i>Copyright&copy;</i></small>
+            </p>
+          </section>
+        </footer>
+      </main>
     </section>
-
-    <section class="col-md-6">
-
-        <figure class="figure">
-            <img class="img" src="https://via.placeholder.com/150">
-            <figcaption class="figure-caption text-primary">A caption for the above image.</figcaption>
-          </figure>
-    </section>
-
-        </section>
-
-        <section class="row">
-
-    <section class="col-md-6">
-
-        <figure class="figure">
-            <img class="img" src="https://via.placeholder.com/150">
-            <figcaption class="figure-caption text-primary">A caption for the above image.</figcaption>
-          </figure>
-    </section>
-
-        </section>
-    </section>
-
-    </section>
-    <br>
-
-<footer class=" row bg-warning footer">
-    <section class="col">
-    <p class="text-center"><small><i>Copyright&copy;</i></small> </p>
-</section>
-</footer>
-
-</main>
-</section>
-</body>
+  </body>
 </html>
+<!-- Calling jquery first -->
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Carousel -->
+<script language="JavaScript" type="text/javascript">
+  $(document).ready(function () {
+    $(".carousel").carousel({
+      interval: 3000,
+    });
+    $(".dropdown-toggle").dropdown();
+  });
+</script>

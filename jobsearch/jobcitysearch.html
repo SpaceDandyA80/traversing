@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Job and City Search</title>
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Jumbotron for Title -->
+    <!-- <div class="jumbotron">
+      <h1 class="text-center">Job and City Search</h1>
+      <h3 class="text-center">Find the right opportunity in the right location!</h3>
+    </div> -->
+
+    <header>
+      <h1 class="text-left">YourJob&YourCity</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#sign-in">Sign In</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="b">Find the right opportunity in the right city!</p>
+
+    </header>
+
+    <div class="clearfix">
+
+      <div class="main">
+        <img src="./assets/images/streetlights.jpg" style="max-width: 1110px" alt="city street lights" />
+      </div>
+
+      <div class="card">
+        <form method="POST">
+          <div class="input-group">
+            <label for="keyword">Job Search</label>
+            <input type="text" name="keyword" id="jobSearch" placeholder="Job Title, Keywords, or Company" />
+          </div>
+          <div class="input-group">
+            <label for="City">City</label>
+            <input type="City" name="City" id="citySearch" placeholder="Where" />
+          </div>
+          <div id="msg"></div>
+          <button id="search">Search</button>
+          <button id="clear">Clear</button>
+        </form>
+      </div>
+
+      <div class="row">
+
+        <!-- Job search results Card (Left)-->
+        <div class="col-md-6">
+          <div class="card">
+            <h3 class="card-header">Jobs</h3>
+            <div class="card-body" id="jobSection">
+            </div>
+            <!-- will save pagination for future development, possibly v2.0 -->
+            <!-- <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav> -->
+
+          </div>
+        </div>
+
+        <!-- City result Card (Right)-->
+        <div class="col-md-6">
+          <div class="card">
+            <h3 class="card-header">City</h3>
+            <div class="card-body" id="weatherSection">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="logic.js"></script>
+
+    <footer>
+      <p>
+        &copy; 2020 MattGuillermoSheena, Inc.
+      </p>
+    </footer>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<title>Portfolioism</title>
+
+</head>
+
+<body>
+	<section class="jumbotron" id="container">
+		<header>
+			<section class="row">
+				<section class="col">
+
+					<nav class="navbar navbar-dark bg-success font-weight-bolder">
+						<h1 class=" p-3 mb-2 text-dark text-center text-uppercase">Guillermo Garcia</h1>
+						<section class="navbar nav-pills justify-content-end ">
+							<div class="dropdown">
+								<button
+								  class="btn btn-secondary dropdown-toggle"
+								  type="button"
+								  id="dropdownMenuButton"
+								  data-toggle="dropdown"
+								  aria-haspopup="true"
+								  aria-expanded="false">
+								  Navigate
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="about.html">About</a>
+									<a class="active dropdown-item" href="portfolio.html">Portfolio</a>
+									<a class="dropdown-item" href="contact.html">Contact</a>
+								</div>
+							  </div>
+						</section>
+					</nav>
+				</section>
+			</section>
+		</header>
+		<br>
+		<main>
+
+			<section class="card bg-secondary">
+				<section class="card-body">
+
+					<h1 class="text-dark"> About Me</h1>
+					<hr>
+
+					<section class="row">
+						<section class="col-md-3">
+							<img class="img img-thumbnail"
+								src="https://inteng-storage.s3.amazonaws.com/img/iea/nR6bkXZxwo/sizes/software-engineering-skills_resize_md.jpg"
+								width="150" height="150"></a>
+
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary" data-toggle="modal"
+								data-target="#exampleModalLong">
+								Click here to view my resume
+							</button>
+
+							<!-- Modal -->
+							<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+								aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLongTitle">My Resume</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<embed href="./assets/images/WebDevResume.pdf" src="./assets/images/WebDevResume.pdf" type="application/pdf" width="100%"
+								height="100%" />
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					
+										</div>
+									</div>
+								</div>
+							</div>
+							
+
+						</section>
+						<section class="col-md-9">
+							<p class="text-break text-justify">Just a little bit about me. I have growing knowledge in
+								the tech world
+								I'm studying to become a software engineer, specifically a web developer. I need to hone
+								my skills in order to
+								create more fluent and beautiful web pages in order to land a good job.</p>
+							<div class="media">
+								<div class="media-body">
+									<h5 class="mt-0 mb-1">My Github profile</h5>
+									Features most of my projects that i have done to date, check them out and be amazed!
+									Click on the Github logo and to see them!
+									<a class="nav-link" href="https://github.com/SpaceDandyA80">
+										<img class="ml-3"
+											src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png"
+											alt="github logo" width="80" height="80"> </a>
+								</div>
+							</div>
+							<div class="media">
+								<div class="media-body">
+									<h5 class="mt-0 mb-1">My LinkedIn profile</h5>
+									My linkedIn profile can help you contact me and display more information about me!
+									Click on the linkedIn logo and to see them!
+									<a class="nav-link"
+										href="https://www.linkedin.com/in/guillermo-garcia-57140a1a4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BfYzMQVJ%2FTnSATrct6wRdAw%3D%3D">
+										<img class="ml-3"
+											src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"
+											alt="linkedIn logo" width="50" height="50"> </a>
+								</div>
+							</div>
+
+						</section>
+					</section>
+
+				</section>
+
+			</section>
+			<br>
+
+			<footer class="row footer">
+				<section class="col">
+					<p class="text-center"><small><i>Copyright&copy;</i></small> </p>
+				</section>
+			</footer>
+
+		</main>
+	</section>
+</body>
+
+</html>
+
+<!-- Calling jquery first -->
+<script
+src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Carousel -->
+<script language="JavaScript" type="text/javascript">
+  $(document).ready(function () {
+
+    $(".dropdown-toggle").dropdown();
+  });
+</script>

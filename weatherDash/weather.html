@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>weather dashboard</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/aa90b0e553.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <nav class="navbar navbar-dark bg-dark justify-content-center">
+            <h1 class="text-light">Weather Dashboard</h1>
+        </nav>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="card">
+                        <div class="card-header">
+                    <b>Search for a City:</b>
+                    <input type="text" class="form-control" id="searchTerm" placeholder="search for cities">
+                    <button type="submit" id="searchBtn" class="fas fa-search btn btn-primary btn-lg"></button>
+                    <div class="card" id="displayCities"></div>
+                </div>
+                </div>
+                </div>
+               
+                <div class="card-body">
+
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header"><h3>Your City</h3></div>
+                    <div class="card-body border border-secondary" id="cardSection">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var authKey = "60491f0ae881db1d21b8fc251fe7e947"
+            // var queryTerm = "";
+            //var numResults = 0;
+
+            function runQuery(newLink) {
+                console.log("newLink", newLink)
+
+                $.ajax({
+                    url: newLink,
+                    method: "GET"
+                })
+                    .then(function (WeatherData) {
+                        $("#cardSection").empty();
+                        // tofixed(2)
+                        //start dumping to html
+                        var sectionCard = $("<div>");
+                        sectionCard.attr("id", "articleCard");
+                        sectionCard.addClass("border border-secondary card-body");
+                        $("#cardSection").append(sectionCard);
+                        //attach the content the appropiate well
+                        $("#articleCard").append("<h3>" + ((WeatherData.list[1].main.temp - 273.15) * 9 / 5 + 32).toFixed(2) + "°F" + " </h3>");
+                        $("#articleCard").append("<img src=" + "http://openweathermap.org/img/wn/" + WeatherData.list[2].weather[0]['icon'] + "@2x.png" + ">");
+                        $("#articleCard").append("<h3>" + "Description: " + "</h3>" + "<b>"+ WeatherData.list[2].weather[0]['description']+"</b>");
+                        $("#articleCard").append("<h3>" + " Humidity: " + WeatherData.list[1].main.humidity + "%" + " </h3>");
+                        $("#articleCard").append("<h3>" + WeatherData.city.name + "</h3>");
+                        // how can i add a class to the newly appended <h3>
+                        // var weatherMapDaily =$("<div>");
+
+                    });
+            }
+
+            $("#searchBtn").on("click", function (event) {
+                event.preventDefault();
+                // get search term
+                var queryTerm = $("#searchTerm").val().trim().split(" ").join("+");
+                // if (queryTerm.length > 1) {
+                //     queryTerm = queryTerm.join("+");
+                // };
+                var citySearch = $("#searchTerm").val().toUpperCase().trim();
+                console.log(queryTerm);
+                $("#displayCities").append("<h3>" + citySearch + "</h3>");
+                    
+                //add in the search term
+                var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + queryTerm + "&appid=" + authKey;
+                //add the date information to the url
+                // console.log("second Link", newURL)
+
+                runQuery(queryURL);
+                // runQuery("string");
+            })
+
+        });
+    </script>
+</body>
+
+</html>
