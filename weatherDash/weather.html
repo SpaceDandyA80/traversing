@@ -79,7 +79,7 @@
                         $("#cardSection").append(sectionCard);
                         //attach the content the appropiate well
                         $("#articleCard").append("<h3>" + ((WeatherData.list[1].main.temp - 273.15) * 9 / 5 + 32).toFixed(2) + "°F" + " </h3>");
-                        $("#articleCard").append("<img src=" + "http://openweathermap.org/img/wn/" + WeatherData.list[2].weather[0]['icon'] + "@2x.png" + ">");
+                        $("#articleCard").append("<img src=" + "https://openweathermap.org/img/wn/" + WeatherData.list[2].weather[0]['icon'] + "@2x.png" + ">");
                         $("#articleCard").append("<h3>" + "Description: " + "</h3>" + "<b>"+ WeatherData.list[2].weather[0]['description']+"</b>");
                         $("#articleCard").append("<h3>" + " Humidity: " + WeatherData.list[1].main.humidity + "%" + " </h3>");
                         $("#articleCard").append("<h3>" + WeatherData.city.name + "</h3>");
@@ -101,7 +101,7 @@
                 $("#displayCities").append("<h3>" + citySearch + "</h3>");
                     
                 //add in the search term
-                var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + queryTerm + "&appid=" + authKey;
+                var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + queryTerm + "&appid=" + authKey;
                 //add the date information to the url
                 // console.log("second Link", newURL)
 
